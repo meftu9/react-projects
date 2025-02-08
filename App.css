@@ -1,0 +1,153 @@
+* {
+  margin: 0;
+}
+
+.App {
+  font-family: Arial, sans-serif;
+  text-align: center;
+  margin: 50px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  width: 1100px;
+  height: 500px;
+  padding-top: 30px;
+  padding-left: 0px;
+  background-color: rgba(0, 0, 0, 0.2);
+  justify-content: center;
+}
+
+.input-container {
+  margin-bottom: 20px;
+  margin-left: 60px;
+}
+
+span {
+  text-align: left;
+}
+
+input {
+  padding: 10px;
+  font-size: 16px;
+  width: 250px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+
+
+.task-list {
+  list-style-type: none;
+  width: 480px;
+  margin-left: 330px;
+  display: flex;
+  flex-direction: column; 
+}
+
+.task-list li {
+  background-color: #f4f4f4;
+  padding: 10px;
+  margin: 5px 0; 
+  display: flex;
+  justify-content: flex-start; 
+  align-items: center;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2), inset 0 2px 5px rgba(0, 0, 0, 0.1);
+  position: relative; 
+}
+
+.task-list li.completed {
+  text-decoration: line-through;
+  color: #888;
+}
+
+button {
+  background-color: #080302;
+  color: white;
+  border: none;
+  padding: 10px 15px;
+  font-size: 15px;
+  cursor: pointer;
+  border-radius: 30px !important;
+  margin-left: 10px !important ;
+  
+}
+
+input[type=checkbox] {
+  margin: 0 10px 0 0; 
+  padding: 0;
+  appearance: none;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  width: 20px;
+  height: 20px;
+  border: 2px solid #ccc;
+  border-radius: 15px;
+  display: inline-block;
+  position: relative;
+  background-color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+input[type="checkbox"]:checked {
+  background-color: white;
+  border-color: #080302;
+}
+
+input[type="checkbox"]:checked::after {
+  content: '';
+  position: absolute;
+  left: 4px;
+  top: 2px;
+  width: 5px;
+  height: 9px;
+  border: solid #080302;
+  border-width: 0 3px 3px 0;
+  transform: rotate(45deg);
+}
+
+button:hover {
+  background-color: #888;
+}
+
+.delete-icon {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.edit-icon {
+  position: absolute;
+  top: 50%;
+  right: 60px; 
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.filter-buttons button.active {
+  background-color: black;
+  color: white;
+}
+
+.filter-buttons {
+  display: flex;
+  flex-direction: row; 
+  gap: 20px;
+  align-items: center;
+  margin-top: 30px;
+  margin-left: 380px;
+  margin-bottom: 30px;
+}
+
+.filter-buttons button {
+  background-color: white;
+  border: 1px solid #ccc;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 1rem;
+  transition: background-color 0.3s ease;
+  width: 110px; 
+  text-align: center;
+  color: black;
+  padding: 10px;
+}
