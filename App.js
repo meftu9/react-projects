@@ -6,7 +6,6 @@ import FilterButtons from './FilterButtons';
 import TaskList from './TaskList';
 
 function App() {
-  // Load tasks from local storage directly in useState
   const [tasks, setTasks] = useState(() => {
     const savedTasks = localStorage.getItem('tasks');
     return savedTasks ? JSON.parse(savedTasks) : [];
@@ -16,7 +15,6 @@ function App() {
   const [editingTask, setEditingTask] = useState(null);
   const [filter, setFilter] = useState('all');
 
-  // Save tasks to local storage whenever tasks change
   useEffect(() => {
     localStorage.setItem('tasks', JSON.stringify(tasks));
   }, [tasks]);
